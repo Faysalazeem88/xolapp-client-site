@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="GWC Solo App for Invoices, Quotes, and Appointments.">
+
+
+  <meta name="google-signin-client_id" content="816017036843-vf733qpiok6f95a6k01h18bfptmhv0uf.apps.googleusercontent.com">
+
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="GWC Solo App">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>GWC Solo App</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- ✅ Firebase SDKs (modular) -->
+  <script type="module">
+    // Import Firebase modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+    // ✅ Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCJXWyIB-4B65LZuGP2SmvpCKlYlAQwlEs",
+      authDomain: "gwc-solo-invoice.firebaseapp.com",
+      projectId: "gwc-solo-invoice",
+      storageBucket: "gwc-solo-invoice.appspot.com",
+      messagingSenderId: "816017036843",
+      appId: "1:816017036843:web:e6bc827fd1228201c0fc6e"
+    };
+
+    // ✅ Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    getAuth(app); // Initialize auth
+    getFirestore(app); // Initialize firestore
+  </script>
+</head>
+
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
